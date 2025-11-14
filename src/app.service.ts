@@ -46,6 +46,7 @@ export class AppService {
       { header: 'Org. Dirección', key: 'orgDireccion', width: 30 },
       { header: 'Org. Tipo', key: 'orgTipo', width: 25 },
       { header: 'Intervención', key: 'intervencion', width: 40 },
+      { header: 'Tema o Pregunta', key: 'tema', width: 50 },
       { header: 'Aceptación', key: 'aceptacion', width: 10 },
       { header: 'Fecha Registro', key: 'create_at', width: 20 },
     ];

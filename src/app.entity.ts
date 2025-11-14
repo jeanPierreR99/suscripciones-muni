@@ -35,6 +35,9 @@ export class App {
     @Column({ nullable: true })
     otroDocumento: string;
 
+    @Column({ nullable: true, type: 'text' })
+    tema: string;
+
     @Column({ nullable: true })
     ajuste: string;
 
