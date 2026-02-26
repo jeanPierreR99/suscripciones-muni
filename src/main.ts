@@ -23,7 +23,8 @@ async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
 
   app.enableCors();
-  app.setGlobalPrefix('api/audiencia');
+  // app.setGlobalPrefix('api/audiencia');
+  app.setGlobalPrefix('api/suscripciones');
 
   app.useGlobalInterceptors(new NoCacheInterceptor(), new TransformInterceptor());
   app.useGlobalPipes();

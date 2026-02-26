@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { DatabaseModule } from './database.module';
+import { DatabaseModule } from './presupuesto/database.module';
 import { ConfigModule } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { App } from './app.entity';
+import { Presupuesto } from './presupuesto/app.entity';
+import { AppController } from './presupuesto/app.controller';
+import { AppService } from './presupuesto/app.service';
+import { App } from './audiencia/app.entity';
 
 @Module({
   imports: [
@@ -13,7 +14,7 @@ import { App } from './app.entity';
     }),
     DatabaseModule,
     TypeOrmModule.forFeature([
-      App
+      Presupuesto, App
     ]),
   ],
   controllers: [AppController],

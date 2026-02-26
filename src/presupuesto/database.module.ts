@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { App } from './app.entity';
+import { Presupuesto } from './app.entity';
+import { App } from 'src/audiencia/app.entity';
 
 @Module({
     imports: [
@@ -18,10 +19,8 @@ import { App } from './app.entity';
                 username: config.get<string>('DB_USER'),
                 password: config.get<string>('DB_PASSWORD'),
                 database: config.get<string>('DB_NAME'),
-                entities: [App],
+                entities: [Presupuesto, App],
                 synchronize: true,
-                // logging: true,
-                // logger: 'advanced-console',
             }),
         }),
     ],

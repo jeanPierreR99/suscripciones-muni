@@ -93,6 +93,6 @@ export class AppService {
       row.height = 40;
     });
 
-    return await workbook.xlsx.writeBuffer() as Buffer;
+    return await workbook.xlsx.writeBuffer() as any;
   }
 }
